@@ -8,6 +8,7 @@ from hypothesis import given
 from hypothesis.extra.numpy import array_shapes, arrays
 from hypothesis.strategies import integers, floats
 from numpy.testing import assert_almost_equal
+import pytest
 from scipy.spatial.distance import pdist, squareform
 from sklearn.neighbors import KernelDensity
 
