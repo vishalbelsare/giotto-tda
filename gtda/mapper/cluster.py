@@ -93,7 +93,7 @@ class ParallelClustering(BaseEstimator):
                             "sklearn.base.ClusterMixin.")
         params = [param for param in ['metric', 'affinity']
                   if param in signature(self.clusterer.__init__).parameters]
-        precomputed = [param for param in params 
+        precomputed = [param for param in params
                        if (getattr(self.clusterer, param) == 'precomputed')]
         if not precomputed:
             self._precomputed = False
