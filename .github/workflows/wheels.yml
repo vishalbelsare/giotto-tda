@@ -88,7 +88,7 @@ jobs:
           CIBW_ENVIRONMENT_PASS_LINUX: BOOST_ROOT
           CIBW_REPAIR_WHEEL_COMMAND_WINDOWS: "delvewheel repair -vv -w {dest_dir} {wheel}"
           CIBW_MANYLINUX_X86_64_IMAGE: manylinux2014
-          # Should generate universal2 wheels for CP3.8 -- CP3.11
+          # Should generate universal2 wheels for CP3.8 -- CP3.12
           CIBW_ARCHS_MACOS: x86_64 universal2
 
       - uses: actions/upload-artifact@v2
