@@ -26,7 +26,6 @@ hypothesis_settings = dict(
 )
 
 
-@pytest.mark.skip(reason="needs to be analysed and fixed for python >=3.9")
 @settings(**hypothesis_settings)
 @given(X=mapper_input)
 def test_node_intersection(X):
