@@ -135,7 +135,6 @@ def test_list_feature_union_transform(X):
     assert_almost_equal(x_12, x_1_2)
 
 
-@pytest.mark.skip(reason="very slow on python >=3.9")
 @given(X=arrays(dtype=float,
                 elements=floats(allow_nan=False,
                                 allow_infinity=False,
