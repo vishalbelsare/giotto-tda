@@ -36,6 +36,11 @@ jobs:
         plat: manylinux2014_x86_64
         python_ver: '310'
         python.version: '3.10'
+      Python311:
+        arch: x86_64
+        plat: manylinux2014_x86_64
+        python_ver: '311'
+        python.version: '3.11'
   variables:
     CCACHE_DIR: $(Pipeline.Workspace)/ccache
 
@@ -154,7 +159,7 @@ jobs:
 
   # Python and gcc hotfixes following https://github.com/actions/virtual-environments/issues/2322 and https://github.com/actions/virtual-environments/issues/2391
   - script: |
-      set -e      
+      set -e
       brew install boost ccache
     displayName: 'Install system dependencies'
 
