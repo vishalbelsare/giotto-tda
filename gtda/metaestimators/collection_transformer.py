@@ -105,7 +105,7 @@ class CollectionTransformer(BaseEstimator, TransformerMixin):
     def _transformer_has(attr):
         def check(self):
             return hasattr(self.transformer, attr)
- 
+
         return check
 
     def fit(self, X, y=None):
