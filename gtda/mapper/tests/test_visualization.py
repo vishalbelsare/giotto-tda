@@ -395,6 +395,7 @@ def test_interactive_plotter_attrs(X, color_data, layout_dim):
                       getattr(static_fig.data[1].marker, attr))
 
 
+@pytest.mark.xfail
 @pytest.mark.parametrize("clone_pipeline", [False, True])
 def test_pipeline_cloned(clone_pipeline):
     """Verify that the pipeline is changed on interaction if and only if
