@@ -649,7 +649,7 @@ class ComplexPolynomial(BaseEstimator, TransformerMixin):
         if self.n_coefficients is None:
             self.n_coefficients_ = [_homology_dimensions_counts[dim]
                                     for dim in self.homology_dimensions_]
-        elif type(self.n_coefficients) == list:
+        elif isinstance(self.n_coefficients, list):
             if len(self.n_coefficients) != _n_homology_dimensions:
                 raise ValueError(
                     f'`n_coefficients` has been passed as a list of length '
